@@ -1,0 +1,20 @@
+@startuml
+PhoneBook "1" *-- "many" PhoneBookEntry
+class PhoneBookEntry {
+    -lastName : String
+    -firstName : String
+    -phoneNumber : String
+    -address : String
+    +getAddress() : String
+    +getLastName() : String
+    +getPhoneNumber() : String
+    +getFullName() : String
+    +setLastName(String)
+    +setPhoneNumber(String)
+    +setFullName(String)
+    +setAddress(String)
+}
+class PhoneBook {
+    -Entries : ArrayList<PhoneBookEntry>
+}
+@enduml
